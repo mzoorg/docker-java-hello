@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install -y\
     tomcat9\
     default-jdk\
