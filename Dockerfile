@@ -9,5 +9,5 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /boxfuse-sample-java-war-hello
 RUN mvn package
 RUN cp target/hello-1.0.war /var/lib/tomcat9/webapps/
-RUN systemctl restart tomcat9
 EXPOSE 80 80
+ENTRYPOINT exec catalina.sh run
